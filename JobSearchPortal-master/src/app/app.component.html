@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-nav></app-nav>
+
+<app-header *ngIf="isHomePage()"></app-header>
+<app-emp-header *ngIf="isEmployeePage()"></app-emp-header>
+
+<app-loader></app-loader>
+
+
+<!-- <input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+
+<button type="button" class="btn btn-success btn-s"
+      (click)="uploader.uploadAll()"
+      [disabled]="!uploader.getNotUploadedItems().length">
+      Upload with ng-2 file uploader
+</button> -->
+
+
+<div class="container">
+  <div class="col-md-8 order-md-1 offset-md-2 message-section">
+    <flash-messages></flash-messages>
+  </div>
+  <div class="row">
+
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+
+<app-footer></app-footer>
